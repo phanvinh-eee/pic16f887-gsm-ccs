@@ -1,0 +1,327 @@
+004     @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     portb
+006.0   B0
+006.1   B1
+006.2   Led1
+006.2   B2
+006.3   Led2
+006.3   B3
+006.4   B4
+006.5   B5
+006.6   B6
+006.7   B7
+007     portc
+007.1   C1
+007.2   C2
+007.3   C3
+009     porte
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027-028 strtok.save
+029-05F RxBuf
+060-06F numberphone
+070     RxHead
+071     i
+072     numsms
+073     calling
+074     startsms
+075     p_char1
+076     p_char2
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     newsms
+07C     admin
+07D     smsmode
+07E     smscount
+07F     @INTERRUPT_AREA
+087     trisc
+087.1   trisc1
+087.2   trisc2
+087.3   trisc3
+089     trise
+089.1   trise1
+08C     pie1
+08C.5   rcie
+0A0-0B9 smstext
+0BA-0BF numfull
+0C0-0CF numtem1
+0D0-0DF numtem
+0E0-0E6 mk
+0E7-0E8 c
+0E9-0EA ret_val
+0EB     delay_100
+0EC     MAIN.@SCRATCH1
+0ED     MAIN.@SCRATCH2
+0EE     MAIN.@SCRATCH3
+0EF     MAIN.@SCRATCH4
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+110-11B @STRPARAM
+11C     doimktk.t
+11C     kttkchinh.t
+11C     readsms.t
+11C     checkcall.t
+11C-164 @STRPARAM
+11C     kttkphu.t
+11C     GSM_sel_mess_mode.mode
+11C     admin1.t
+11C-11D strcat.s1
+11C     xoasdt.t
+11C     admin2.t
+11C     smsInit.@SCRATCH1
+11C     turndevice.@SCRATCH1
+11C     admin0.@SCRATCH1
+11C     echo.@SCRATCH1
+11C     GSM_sync.@SCRATCH1
+11D-12E kttkphu.@STRPARAM
+11D-12E @STRPARAM
+11D-135 @STRPARAM
+11D-131 admin2.@STRPARAM
+11D-128 admin1.@STRPARAM
+11D-134 @STRPARAM
+11D-12D checkcall.@STRPARAM
+11D-12E kttkchinh.@STRPARAM
+11D     smsInit.@SCRATCH2
+11D     admin0.@SCRATCH2
+11D     readsms.@SCRATCH1
+11E-11F strcat.s2
+11E     admin0.@SCRATCH3
+11E     readsms.@SCRATCH2
+11F     admin0.@SCRATCH4
+11F     readsms.@SCRATCH3
+120-121 strcat.s
+120     admin0.@SCRATCH5
+122     strcat.@SCRATCH1
+123     strcat.@SCRATCH2
+124     strcat.@SCRATCH3
+129     admin1.@SCRATCH1
+12A     admin1.@SCRATCH2
+12B     admin1.@SCRATCH3
+12C     admin1.@SCRATCH4
+12E     checkcall.@SCRATCH1
+12F     kttkchinh.@SCRATCH1
+12F     kttkphu.@SCRATCH1
+12F     checkcall.@SCRATCH2
+12F     GSM_sel_mess_mode.@SCRATCH1
+130     kttkchinh.@SCRATCH2
+130     kttkphu.@SCRATCH2
+130     checkcall.@SCRATCH3
+130     GSM_sel_mess_mode.@SCRATCH2
+131-132 sendCommand.AT_cmd
+131-132 IsStringReceived.compare_string
+131     kttkchinh.@SCRATCH3
+131     kttkphu.@SCRATCH3
+131     checkcall.@SCRATCH4
+131     GSM_sel_mess_mode.@SCRATCH3
+132     kttkchinh.@SCRATCH4
+132     kttkphu.@SCRATCH4
+132     admin2.@SCRATCH1
+132     GSM_sel_mess_mode.@SCRATCH4
+133     RxInit.@SCRATCH1
+133     sendCommand.@SCRATCH1
+133     IsStringReceived.@SCRATCH1
+133     admin2.@SCRATCH2
+134-135 strstr.s1
+134     RxInit.@SCRATCH2
+134     admin2.@SCRATCH3
+135-14F @STRPARAM
+135     admin2.@SCRATCH4
+136-137 strstr.s2
+136     xoasdt.@SCRATCH1
+137     xoasdt.@SCRATCH2
+138-139 strstr.s
+138     xoasdt.@SCRATCH3
+139     xoasdt.@SCRATCH4
+13A-13B strstr.t
+13C     strstr.@SCRATCH1
+150-15C @STRPARAM
+15D     eeprom_read_string.addr
+15D     doimktk.@SCRATCH1
+15E-15F eeprom_read_string.str
+15E     doimktk.@SCRATCH2
+15F     doimktk.@SCRATCH3
+160     eeprom_read_string.len
+160     doimktk.@SCRATCH4
+161     eeprom_read_string.i
+162     eeprom_read_string.@SCRATCH1
+163     eeprom_read_string.@SCRATCH2
+164     eeprom_read_string.@SCRATCH3
+165     eeprom_write_string.addr
+165-166 gsmchr.str
+165     themsdt.@SCRATCH1
+166-167 eeprom_write_string.str
+166     themsdt.@SCRATCH2
+167     gsmchr.size
+167-168 sendsms.number_str
+167     themsdt.@SCRATCH3
+168     gsmchr.ch
+168     eeprom_write_string.@SCRATCH1
+168     themsdt.@SCRATCH4
+169     gsmchr.num
+169-16A sendsms.message_str
+16A     gsmchr.t
+16B     gsmchr.@SCRATCH1
+16B     @PSTRINGR_9600_62_63.@SCRATCH1
+16B     @PSTRINGC7_9600_62_63.@SCRATCH1
+16B     sendsms.@SCRATCH1
+16C     @delay_ms1.P1
+16C     @PSTRINGR_9600_62_63.@SCRATCH2
+16C     @PSTRINGC7_9600_62_63.@SCRATCH2
+16D     @PSTRINGC7_9600_62_63.@SCRATCH3
+16E     UART_ISR.@SCRATCH1
+16F     UART_ISR.@SCRATCH2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+02C2  @delay_ms1
+0E58  strcat
+0516  strstr
+0038  error1
+004D  setkttk
+005B  kttka
+0071  kttkb
+0087  saicuphap
+0097  msg9
+009F  cnmi
+00B5  cmgd
+00C3  cmgdall
+00D3  quenmk
+00DE  msg1
+012E  msg2
+014B  msg3
+0158  msg4
+0165  msg5
+0184  msg6
+0195  msg7
+01B1  msg8
+01CA  xoahet
+01D5  atclcc
+01E1  clcc
+01F6  cmee
+0207  cmgf
+03FF  gsmchr
+059E  eeprom_write_string
+041D  eeprom_read_string
+0330  RxInit
+07E1  smsInit
+0330  sendCommand
+0312  @PSTRINGR_9600_62_63
+0B32  IsStringReceived
+0241  UART_ISR
+0F8E  turndevice
+0215  @const315
+02D6  @PSTRINGC7_9600_62_63
+0566  sendsms
+0218  @const321
+0800  themsdt
+0920  @goto10734
+0928  xoasdt
+0A45  doimktk
+0B60  kttkchinh
+0C23  kttkphu
+05D4  admin1
+0CE6  admin2
+0E17  admin0
+0446  readsms
+0EA0  checkcall
+021D  @const352
+03EA  echo
+0220  @const354
+0359  GSM_sel_mess_mode
+0224  @const358
+03BA  GSM_sync
+0228  @const360
+022B  @const361
+022E  TIMER0_isr
+0241  rda
+1000  MAIN
+02B7  @const502
+1000  @cinit
+
+
+User Memory space: 
+
+User Memory space: 
+
+Project Directory:
+    D:\tai lieu viettel\dk qua dt\code3\code25-9\code3\
+
+Project Files:
+    main.c
+    main.h
+    C:\Program Files\PICC\devices\16F887.h
+    function.c
+    myLCD16x2.c
+    C:\Program Files\PICC\drivers\string.h
+    C:\Program Files\PICC\drivers\stddef.h
+    C:\Program Files\PICC\drivers\ctype.h
+    C:\Program Files\PICC\drivers\math.h
+
+Units:
+    D:\tai lieu viettel\dk qua dt\code3\code25-9\code3\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.PJT
+    Call Tree:   main.tre
+    Statistics:  main.sta

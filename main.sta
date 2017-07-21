@@ -1,0 +1,115 @@
+
+ROM used: 4361 (53%)
+          4446 (54%) including unused fragments
+
+          1 Average locations per line
+          5 Average locations per statement
+
+RAM used: 176 (48%) at main() level
+          272 (74%) worst case
+
+Stack used: 5 worst case (out of 8 total available)
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  113    75   8  main.c
+  105     0   0  main.h
+  425     0   0  C:\Program Files\PICC\devices\16F887.h
+  548   383  43  function.c
+  166    54   6  myLCD16x2.c
+  409   121  14  C:\Program Files\PICC\drivers\string.h
+   28     0   0  C:\Program Files\PICC\drivers\stddef.h
+   28     0   0  C:\Program Files\PICC\drivers\ctype.h
+ 2172   260  29  C:\Program Files\PICC\drivers\math.h
+----- -----
+ 3994   893 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   0   1             @delay_ms1
+ Inline        9   272  5.5  strcat
+0     80   2   9   318  6.5  strstr
+0     21   0   0             @const215
+0     14   0   0             @const221
+0     22   1   0             @const223
+0     22   1   0             @const225
+0     16   0   0             @const227
+0      8   0   0             @const229
+0     22   1   0             @const237
+0     14   0   0             @const239
+0     16   0   0             @const241
+0     11   0   0             @const243
+0     80   2   0             @const249
+0     29   1   0             @const251
+0     13   0   0             @const253
+0     13   0   0             @const255
+0     31   1   0             @const257
+0     17   0   0             @const259
+0     28   1   0             @const261
+0     25   1   0             @const263
+0     11   0   0             @const267
+0     12   0   0   272  6.3  @const271
+0     21   0   0   119  3.5  @const273
+0     17   0   0   274  6.2  @const275
+0     14   0   0   272  6.3  @const277
+0     30   1   7   272  6.3  gsmchr
+0     54   1   4   119  3.5  eeprom_write_string
+0     41   1   8   274  6.2  eeprom_read_string
+ Inline        2   136  3.5  RxInit
+0     22   1   2   181  3.6  smsInit
+0     41   1   3    72  1.8  sendCommand
+0     30   1   2   173  5.3  @PSTRINGR_9600_62_63
+1     46   1   3   173  5.3  IsStringReceived
+ Inline        2   918  5.3  UART_ISR
+1     38   1   1    90  1.5  turndevice
+0      3   0   0             @const315
+0     60   1   3    50  1.5  @PSTRINGC7_9600_62_63
+0     56   1   5   172  2.3  sendsms
+0      5   0   0   768  8.2  @const321
+1    288   7   4  1743  9.3  themsdt
+1      8   0   0  1650  7.8  @goto10734
+1    285   7   5  1583  7.8  xoasdt
+1    237   5   5   979  8.3  doimktk
+1    195   4   5   771  7.2  kttkchinh
+1    195   4   5   771  7.2  kttkphu
+0    525  12   5  1956  8.4  admin1
+1    305   7   5   993  8.7  admin2
+1    137   3   5   276  5.1  admin0
+0    208   5   4  1333  8.3  readsms
+1    238   5   5  1071  8.2  checkcall
+0      3   0   0    33  0.9  @const352
+0     21   0   1    33  0.9  echo
+0      4   0   0   167  2.5  @const354
+0     97   2   5   167  2.5  GSM_sel_mess_mode
+0      4   0   0   114  1.0  @const358
+0     48   1   1   114  1.0  GSM_sync
+0      3   0   0    43  2.1  @const360
+0      3   0   0  1124 10.7  @const361
+0     19   0   0   104  4.0  TIMER0_isr
+0    118   3   0    12  0.8  rda
+2    350   8   4  1834  8.7  MAIN
+0     11   0   0             @const502
+
+Program metrics:
+    Functions               41
+    Statements              893
+    Comments                673
+    Volume (V)              38820
+    Difficilty (D)          208.6
+    Effort to implement (E) 8096903
+    Time to implement (T)   124 hours, 57 minutes
+    Est Delivered Bugs (B)  13
+    Cyclomatic Complexity   152
+    Maintainability (MI)    84
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00037    52  0  
+00038-007FF  1983  9  
+00800-00FFF  1972  76  
+01000-017FF   350  1698  
+01800-01FFF     0  2048  
+
+
+
